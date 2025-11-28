@@ -7,3 +7,8 @@ variable "location" {
   type    = string
   default = "East US"
 }
+
+variable "common_tags" {
+  description = "common tags"
+  type = map(string)
+}

@@ -8,10 +8,11 @@ resource "azurerm_resource_group" "rg" {
   name = "silvia-rg-${terraform.workspace}"
   #name     = var.rg_name
   location = var.location
-  tags = {
-    Project    = "Terraform"
-    Owner      = "Silvia"
-    Enviroment = "Dev"
-  }
+  tags = var.common_tags
+  # tags = {
+  #   Project    = "Terraform"
+  #   Owner      = "Silvia"
+  #   Enviroment = "Dev"
+  # }
 }
 
