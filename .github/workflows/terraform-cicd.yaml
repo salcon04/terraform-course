@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/Checkout@4
+        uses: actions/checkout@v4
 
       #- name: Stup Terraform
       - uses: hashicorp/setup-terraform@v3
