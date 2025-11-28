@@ -17,7 +17,7 @@ env:
 jobs:
   terraform: 
     name: 'Terraform Deploy'
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     env: 
       ENVIRONMENT: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev'}}
