@@ -1,9 +1,10 @@
 terraform {
-  backend "azurerm" {
-    resource_group_name  = "rg-tf-state-silvia"
-    storage_account_name = "sastate89912"
-    container_name       = "tf-state"
-    key                  = "cloud/terraform.tfstate"
+  backend "remote" {
+    hostname         = "app.terraform.io"
+    organization = "courses-terraform-20251201"
+    workspaces {
+      name = "dev"
+    }
   }
 
 
