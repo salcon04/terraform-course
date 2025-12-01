@@ -5,13 +5,9 @@
 # terraform plan -refresh-only, me muestra cambios manuales sin integrarlos al estado
 
 resource "azurerm_resource_group" "rg" {
-  name = "silvia-rg-${terraform.workspace}"
-  #name     = var.rg_name
-  location = var.location
-  tags = {
-    Project    = "Terraform"
-    Owner      = "Silvia"
-    Enviroment = "Dev"
-  }
+  name     = "silvia-rg-${terraform.workspace}"
+  location = "eastus"
+  tags     = var.common_tags
+
 }
 
